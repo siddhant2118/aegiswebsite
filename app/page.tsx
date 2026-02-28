@@ -1,8 +1,13 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <main className="landing">
       <header className="nav">
         <div className="brand">AegisWebsite</div>
+        <Link className="btn btn-ghost" href="/login">
+          Login
+        </Link>
       </header>
 
       <section className="hero">
