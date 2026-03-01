@@ -1,17 +1,11 @@
 # AegisWebsite
 
-Temporary consumer-facing website with simple auth login for fast Vercel deployment.
+Consumer-facing AegisCycle landing site with premium GSAP animations.
 
 ## Routes
 
-- `/` landing page
-- `/login` temporary login page
-- `/dashboard` protected page (cookie-based temporary auth)
-
-## Demo Credentials
-
-- Email: `demo@aegis.com`
-- Password: `demo1234`
+- `/` main landing page
+- `/landing` same landing page (alias)
 
 ## Run locally
 

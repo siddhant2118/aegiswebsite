@@ -1,51 +1,33 @@
-import Link from "next/link";
+"use client"
 
-export default function HomePage() {
+import "./landing.css"
+import { LandingFooter } from "@/components/landing/LandingFooter"
+import { LandingNav } from "@/components/landing/LandingNav"
+import { FeatureRailSection } from "@/components/landing/FeatureRailSection"
+import { HeroSection } from "@/components/landing/HeroSection"
+import { HowItWorksSection } from "@/components/landing/HowItWorksSection"
+import { ProblemSection } from "@/components/landing/ProblemSection"
+import { TrustSection } from "@/components/landing/TrustSection"
+import { WaitlistSection } from "@/components/landing/WaitlistSection"
+import { useLandingAnimations } from "@/components/landing/useLandingAnimations"
+
+export default function LandingPage() {
+  useLandingAnimations()
+
   return (
-    <main className="landing">
-      <header className="nav">
-        <div className="brand">AegisWebsite</div>
-        <Link className="btn btn-ghost" href="/login">
-          Login
-        </Link>
-      </header>
+    <div className="landing-page">
+      <LandingNav />
 
-      <section className="hero">
-        <p className="eyebrow">Consumer Preview</p>
-        <h1>Female Physiology, Finally Measurable.</h1>
-        <p>
-          A cycle-aware companion that turns daily signals into personalized
-          lifestyle guidance for sleep, stress, movement, and nutrition.
-        </p>
-        <div className="cta-row">
-          <a className="btn" href="#waitlist">
-            Join Waitlist
-          </a>
-          <a className="btn btn-ghost" href="#how-it-works">
-            See How It Works
-          </a>
-        </div>
-      </section>
+      <main>
+        <HeroSection />
+        <ProblemSection />
+        <HowItWorksSection />
+        <FeatureRailSection />
+        <TrustSection />
+        <WaitlistSection />
+      </main>
 
-      <section id="how-it-works" className="panel">
-        <h2>How it works</h2>
-        <ol>
-          <li>Track daily signals and cycle context.</li>
-          <li>Understand your baseline patterns over time.</li>
-          <li>Act with practical, non-diagnostic daily guidance.</li>
-        </ol>
-      </section>
-
-      <section id="waitlist" className="panel waitlist">
-        <h2>Join the waitlist</h2>
-        <p>Early access opens soon. Save your spot.</p>
-        <form className="waitlist-form">
-          <input type="email" placeholder="you@example.com" required />
-          <button type="submit" className="btn">
-            Reserve
-          </button>
-        </form>
-      </section>
-    </main>
-  );
+      <LandingFooter />
+    </div>
+  )
 }
